@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
+# Copyright (C) 2016-2018 Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
+
+unset _CACHE_PACKAGE_LOCAL _CACHE_PACKAGE_GLOBAL _DEBUG_DEPENDS_LIST _DEBUG_PACKAGE_LIST
+
+. config/options ""
+. config/multithread
+. config/show_config
+
+show_config
+
+${SCRIPTS}/checkdeps
+
+# Setup both toolchain cmake configs to avoid potentially racy behaviour later.
+# Use a fork for host to isolate any variable modifications.

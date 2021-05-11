@@ -1,0 +1,2 @@
+#!/bin/bash
+PROJECT=Amlogic-ce ARCH=arm CUSTOM_VERSION=19.1  scripts/create_addon --show-only official
