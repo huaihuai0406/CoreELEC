@@ -1,0 +1,20 @@
+[B][COLOR red]CoreELEC 9.2.7[/COLOR][/B]
+[B][COLOR darkred]—————————————————————————————————————————————————————————————————————————————————————[/COLOR][/B]
+CoreELEC 9.2.7 with better support for BD-J menus
+
++ include jre.zulu addon in image itself
++ libbluray 1.2.0
++ libaacs 0.10.0
++ libcdio 2.1.0
+
++ correctly show HDR subtitles
++ handle Dolby Vision as h265 (not sure if needed)
+
++ from https://forum.kodi.tv/showthread.php?tid=345566&pid=2917133#pid2917133
+  fix green screen
+    https://github.com/xbmc/xbmc/pull/17186
+  fix some popup menu
+    https://github.com/xbmc/xbmc/pull/17210
+
++ patch from fandangos <veggav@gmail.com>
+  Fix chapter skip and seek in blurays with popup menus
