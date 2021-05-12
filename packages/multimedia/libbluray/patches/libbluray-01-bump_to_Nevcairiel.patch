@@ -95,6 +95,7 @@ index bf4ace12..af14f619 100644
  dnl bootclasspath
  AC_SUBST(BDJ_BOOTCLASSPATH)
  
+-PKG_CHECK_MODULES([LIBUDFREAD], [udfread >= 1.1.0],
 +dnl udf support (using git submodule)
 +AS_IF([test "x$enable_udf" = "xyes"], [
 +if test ! -f "${srcdir}/contrib/libudfread/src/udfread.h"; then
@@ -113,14 +114,6 @@ index bf4ace12..af14f619 100644
 +
 +AM_CONDITIONAL([ENABLE_UDF], [test $enable_udf = "yes" ])
 +
- PKG_CHECK_MODULES([LIBUDFREAD], [udfread >= 1.1.0],
-     [with_libudfread=yes
-      AC_DEFINE([HAVE_LIBUDFREAD], [1], [Define to 1 if external libudfread is to be used])
-@@ -284,7 +284,7 @@ AM_CONDITIONAL([BDJ_J2SE], [ test x"$BDJ
- dnl bootclasspath
- AC_SUBST(BDJ_BOOTCLASSPATH)
- 
--PKG_CHECK_MODULES([LIBUDFREAD], [udfread >= 1.1.0],
 +PKG_CHECK_MODULES([LIBUDFREAD], [libudfread >= 1.1.0],
      [with_libudfread=yes
       AC_DEFINE([HAVE_LIBUDFREAD], [1], [Define to 1 if external libudfread is to be used])
