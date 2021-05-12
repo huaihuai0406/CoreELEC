@@ -7,7 +7,7 @@ PKG_NAME="jre-libXinerama"
 PKG_LONGDESC="libXinerama for JRE"
 PKG_URL=""
 PKG_DEPENDS_UNPACK+=" libXinerama"
-PKG_BUILD_FLAGS="-sysroot"
+# PKG_BUILD_FLAGS="-sysroot"
 
 PKG_CONFIGURE_OPTS_TARGET+=" --disable-static --enable-shared"
 
